@@ -1,8 +1,8 @@
 /**
-  * Authors : Biloni Kim, Fleury Malik, Bulloni Lucas
-  * Date : 13 april 2018
-  * Description : Set of function to calculate cos without trigonometric functions
-  */
+* Authors : Biloni Kim, Fleury Malik, Bulloni Lucas
+* Date : 13 april 2018
+* Description : Set of function to calculate cos without trigonometric functions
+*/
 
 // cosinus calculated with taylor
 function cosTaylor(x)
@@ -33,13 +33,13 @@ function cosTaylor(x)
 // first derivative of a cos calculated with taylor
 function cosFirstDerivative(x)
 {
-
+  return 0.5;
 }
 
 //second derivative of a cos calculated with taylor
 function cosSecondDerivative(x)
 {
-
+  return -0.5;
 }
 
 // function to get the factorial of x
@@ -76,28 +76,4 @@ function generateCosFactorialValuesForTaylor()
   }
 
   return valuesCalculated;
-}
-
-// display a plot in the div
-function displayPlot(divPlot)
-{
-  let layout =
- 	{
-      width: 768,
-      height: 768,
-
- 		xaxis:
- 		{
- 			range: [-4, 4],
-       autorange: false
- 		},
- 		yaxis:
- 		{
- 			range: [-1.1, 1.1],
-			autorange: false
- 		},
- 		hovermode: "closest"
- 	};
-
- 	Plotly.newPlot(this.divTarget, plotData, layout);
 }
