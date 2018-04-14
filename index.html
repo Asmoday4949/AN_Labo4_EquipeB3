@@ -11,21 +11,47 @@
     
 		<h2>Contexte</h2>
 		<p>
-      bla
+      Dans le cadre du cours d'alogrithmes numériques donné par M. Stéphane Gobron
+      à la Haute Ecole Arc Ingénierie de Neuchâtel durant le semestre de printemps 2018, 
+      nous devions calculer et visualiser les fonctions f, f' &amp; f'' pour la fonction 
+      cosinus en utilisant sa série de Taylor.
+    </p>
+    <p>
+        L'objectif secondaire de ce laboratoire est que n'importe quel membre du groupe doit 
+        pouvoir expliquer le cosinus de Taylor.
     </p>
     <hr />
 
 		<h2>Méthodologie de développement</h2>
 		<p>
-      bla
+      La première étape a donc été d'implémenter le calcul du polynôme de Taylor
+      pour la fonction cosinus. Pour ce faire, nous avons créer une fonction cosTaylor(x). 
+      L'intervalle de précisions des valeurs se trouve entre [-&pi;;&pi;[. Comme la fonction 
+      cosinus est prériodique, chacune des valeurs passé à la fonction est ramené
+      dans cet intervalle. Afin d'optimiser la fonction, les valeurs factorielles ont été calculés 
+      préalablement en utilisant la fonction generateCosFactorialValuesForTaylor() puis stockées 
+      dans un tableau constant. Finalement, on calcul puis retourne la valeur.
     </p>
+    <p>
+      Pour calculer la première dérivé f', nous avons implémenter la méthode de la différence 
+      centré ainsi que celle du polynôme du 4<sup>ème</sup> degré. Nous avons finalement décidé
+      d'utilise la deuxième car son ordre d'erreur est h<sup>2</sup> meilleur que la différence centrée.
+      L'ordre d'erreur choisi est 10<sup>-11</sup>.
+    </p>
+    <p>
+      Finalement, la dérivée seconde est calculer avec la méthode centrée. Nous avons repris aussi la formule
+      présente dans le cours. Par contre, cette méthode n'est pas très bonne car l'ordre d'erreur est O(h). 
+      De ce fait, nous avons dû utliser une valeur de h élevé comparé à la première dérivée. La valeur choisi 
+      est 10<sup>-7</sup>.
+    </p>
+
     <hr />
 
     <h2>Graphe</h2>
 
     <div id="graph"></div>
     <p>
-      bla
+      Explication du graphe ? Commentaires sur les résultats ?
     </p>
     <hr />
 
