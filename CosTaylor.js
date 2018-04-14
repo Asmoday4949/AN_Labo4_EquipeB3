@@ -55,7 +55,15 @@ function firstDerivative4thDegrees(f, x, h)
 //second derivative of a cos calculated with taylor
 function cosSecondDerivative(x)
 {
-  return -0.5;
+  return secondDerivative(cosTaylor, x, 0.000001);
+}
+
+// second derivate with centred method
+// h must higher than for the first derivat
+// Error ordre O(h) -> bad algorithm
+function secondDerivative(f, x, h)
+{
+  return (f(x+h) + f(x-h) -2*f(x))/(h*h);
 }
 
 // function to get the factorial of x
