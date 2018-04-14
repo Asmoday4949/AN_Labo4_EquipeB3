@@ -33,7 +33,23 @@ function cosTaylor(x)
 // first derivative of a cos calculated with taylor
 function cosFirstDerivative(x)
 {
-  return 0.5;
+  return firstDerivative4thDegrees(cosTaylor, x, 0.0000000001);
+}
+
+// first derivative with the central difference technique
+// h can be lower than the h value of the 4th polynomial technique
+// error (h^2)
+function firstDerivativeCentral(f, x, h)
+{
+   return (f(x+h)-f(x-h))/(2*h);
+}
+
+// first derivative with the 4th degree polynomial technique
+// h must not be to much low
+// less errors (h^4) and more accurate
+function firstDerivative4thDegrees(f, x, h)
+{
+   return (8*(f(x+h/2)-f(x-h/2))-f(x+h)+f(x-h))/(6*h);
 }
 
 //second derivative of a cos calculated with taylor
