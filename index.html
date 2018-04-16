@@ -11,7 +11,7 @@
     
 		<h2>Contexte</h2>
 		<p>
-      Dans le cadre du cours d'alogrithmes numériques donné par M. Stéphane Gobron
+      Dans le cadre du cours d'algorithmes numériques donné par M. Stéphane Gobron
       à la Haute Ecole Arc Ingénierie de Neuchâtel durant le semestre de printemps 2018, 
       nous devions calculer et visualiser les fonctions f, f' &amp; f'' pour la fonction 
       cosinus en utilisant sa série de Taylor.
@@ -27,21 +27,21 @@
       La première étape a donc été d'implémenter le calcul du polynôme de Taylor
       pour la fonction cosinus. Pour ce faire, nous avons créer une fonction cosTaylor(x). 
       L'intervalle de précisions des valeurs se trouve entre [-&pi;;&pi;[. Comme la fonction 
-      cosinus est prériodique, chacune des valeurs passé à la fonction est ramené
-      dans cet intervalle. Afin d'optimiser la fonction, les valeurs factorielles ont été calculés 
+      cosinus est prériodique, chacune des valeurs passées à la fonction est ramenée
+      dans cet intervalle. Afin d'optimiser la fonction, les valeurs factorielles ont été calculées 
       préalablement en utilisant la fonction generateCosFactorialValuesForTaylor() puis stockées 
-      dans un tableau constant. Finalement, on calcul puis retourne la valeur.
+      dans un tableau constant. Finalement, on calcule puis on retourne la valeur.
     </p>
     <p>
-      Pour calculer la première dérivé f', nous avons implémenter la méthode de la différence 
-      centré ainsi que celle du polynôme du 4<sup>ème</sup> degré. Nous avons finalement décidé
-      d'utilise la deuxième car son ordre d'erreur est h<sup>2</sup> meilleur que la différence centrée.
+      Pour calculer la première dérivé f', nous avons implémenté la méthode de la différence 
+      centrée ainsi que celle du polynôme du 4<sup>ème</sup> degrés. Nous avons finalement décidé
+      d'utiliser la deuxième car son ordre d'erreur est h<sup>2</sup> meilleur que la différence centrée.
       L'ordre d'erreur choisi est 10<sup>-11</sup>.
     </p>
     <p>
-      Finalement, la dérivée seconde est calculer avec la méthode centrée. Nous avons repris aussi la formule
+      Finalement, la dérivée seconde est calculée avec la méthode centrée. Nous avons repris aussi la formule
       présente dans le cours. Par contre, cette méthode n'est pas très bonne car l'ordre d'erreur est O(h). 
-      De ce fait, nous avons dû utliser une valeur de h élevé comparé à la première dérivée. La valeur choisi 
+      De ce fait, nous avons dû utliser une valeur de h élevée comparé à la première dérivée. La valeur choisie 
       est 10<sup>-7</sup>.
     </p>
 
@@ -51,7 +51,6 @@
 
     <div id="graph"></div>
     <p>
-      Explication du graphe ? Commentaires sur les résultats ?
     </p>
     <hr />
 
